@@ -1,0 +1,266 @@
+.hidden {
+    display: none !important;
+}
+
+.details {
+    max-width: 1000px;
+    min-height: 65vh;
+    margin: 40px auto;
+    padding: 45px;
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 14px;
+}
+
+.details h2 {
+    color: #172b4d;
+    margin: 25px 0 15px;
+}
+
+.details p {
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.back-button {
+    border: none;
+    background: #edf4ff;
+    color: #3977db;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #172033;
+    min-height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #e8edf3;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #172b4d;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #3977db;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    border: none;
+    background: transparent;
+    color: #64748b;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #3977db;
+}
+
+main {
+    width: 100%;
+    min-height: 75vh;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 85px 7%;
+    animation: fadeIn 0.4s ease;
+}
+
+.page.active-page {
+    display: block;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro {
+    color: #3977db;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 68px);
+    font-weight: 800;
+    color: #172b4d;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #3977db;
+}
+
+.hero h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #52647d;
+    margin-bottom: 20px;
+}
+
+.hero > p:not(.intro) {
+    max-width: 580px;
+    line-height: 1.8;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.primary-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 7px;
+    background: #3977db;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #245bb4;
+    transform: translateY(-3px);
+}
+
+.page > h1 {
+    font-size: 34px;
+    color: #172b4d;
+    margin-bottom: 25px;
+}
+
+.page > h2 {
+    font-size: 22px;
+    color: #245bb4;
+    margin: 30px 0 12px;
+}
+
+.page > p,
+.page > h3 {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.page a:not(.primary-btn) {
+    color: #3977db;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #8491a5;
+    font-size: 12px;
+    border-top: 1px solid #e8edf3;
+    background: #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .navbar nav {
+        gap: 14px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+    .page {
+        padding: 55px 6%;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+}
